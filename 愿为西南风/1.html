@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>01 钟小会在成都</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="spacer"></li><li class="chapter-item expanded affix "><div>短篇</div></li><li class="chapter-item expanded affix "><a href="../不渡黄泉番外.html">不渡黄泉番外</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><div>愿为西南风</div></li><li class="chapter-item expanded affix "><a href="../愿为西南风/1.html" class="active">01 钟小会在成都</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>　　两片柔软压住唇，钟会暗暗叹口气——行年十五，不大不小，是该娶一房如花美眷，开枝散叶了。</p>
+<p>　　软舌探入，勾出“咕啾”的水声。钟会薄面微微一红，心中慨之以慷道：自己不愧血气方刚，这春梦做得不仅过于逼真，还激烈如斯……肢体交缠，热汗淋漓的。</p>
+<p>　　脊柱被一只骨节分明的手一节节地向下按抚，钟会肩头晃了晃，暗道姑娘这张素手一点也不纤纤，难怪力气也……</p>
+<p>　　“唔……”</p>
+<p>　　不安分的肩头忽然被咬住，灼热的唇沿着肩窝吮向脸颊，钟会方如大梦初醒，想他七尺男儿，怎好意思让姑娘家主动？</p>
+<p>　　于是他不甘示弱地环住身上的人——</p>
+<p>　　嗯？身上？这体位可真意想不到啊……</p>
+<p>　　……</p>
+<p>　　许是姑娘生性奔放，勇往在上，甚善！</p>
+<p>　　于是他不甘示弱地环住身上的人，细细摩挲——</p>
+<p>　　嗯？子上不是说，姑娘都是娇生惯养，摸起来绵绵软软的么？</p>
+<p>　　为何自己手里的这个……有点硬？</p>
+<p>　　……</p>
+<p>　　许是姑娘娘胎养得好，身强体壮，妙哉！</p>
+<p>　　于是他不甘示弱地环住身上的人，细细摩挲，指尖滑过了坚硬的背，平整的胸，紧瘦的腹，脐下两寸地那么一握——</p>
+<p>　　“……………？”</p>
+<p>　　“士季，”滚烫的气息抬离颈侧，压抑的声线，“松开。”</p>
+<p>　　钟会终于如梦似幻地睁开双眼。</p>
+<p>　　灯残如豆。</p>
+<p>　　沉默而坚毅的轮廓线条，被烛影蒸出了几分温度，垂视他的黑眸情动难耐，深处却蕴着男性那不容忽视的强势。</p>
+<p>　　钟会就望着这样一张俊朗如画的脸，怔怔地望着。</p>
+<p>　　直到，那枚把柄在手心沉沉一跳。</p>
+<p>　　“啊啊啊啊啊啊啊啊啊啊啊————！！！”</p>
+<p>　　成都的某个月黑风高夜。</p>
+<p>　　街头巷尾倏然闹起灯火一片。</p>
+<p>　　*</p>
+<p>　　再套不出有用的情报了，钟会有气无力地挥了挥小手：</p>
+<p>　　“你们退下吧。”</p>
+<p>　　“是。”</p>
+<p>　　屏退守卫，屋子一下子空荡荡的，劲风在门外肆虐，屋里的火盆“嗞嗞”地烧，钟会两只手心托住尖尖的下颌，支在桌案上唉声叹气。</p>
+<p>　　唯一能带给这颗受伤心灵小小安慰的，也仅剩下“我还是我”这句状貌废话的事实了。</p>
+<p>　　年届不惑，位列三公，允文允武，亲身披挂统御十万军众挥麾南下——</p>
+<p>　　居然还打赢了！</p>
+<p>　　混乱了大半个甲子，无数英雄豪杰也束手无策的三分之局，居然终结在了这个自己的手中！</p>
+<p>　　！！！</p>
+<p>　　钟司徒，我给你打九分。</p>
+<p>　　要知道他本以为自己那身惊世绝伦的天赋都点在了学途上。</p>
+<p>　　今年他初入太学，才终于见识到了原来林子大了里面飞的都是自我感觉良好的蠢鸟，于是他结交了同样怀揣了颗正风肃纪之心的天才少年王弼，一个阴一个阳，将“在座垃圾”的腥风血雨灌进课堂，拍打在那一张张自命不凡的脸上。</p>
+<p>　　……很爽。</p>
+<p>　　可方才那些人却对他说，王辅嗣年过弱冠便匆忙赴召玉楼了。</p>
+<p>　　钟会忽然有种被丢下的怅惘。</p>
+<p>　　所以钟司徒除却那部年少伊始撰写的《四本论》，再无他作。【*】</p>
+<p>　　昔日那些共谱开山立派之作的豪言壮语，随着相约之人的离世，该是如何残酷而不舍地在弃卷从戎的年岁里一点一滴地泯亡了回声？</p>
+<p>　　钟会猛然甩了甩脑袋。</p>
+<p>　　不行，不能只想伤心事。</p>
+<p>　　十五岁到四十岁，离开的人那么多，辅嗣的死可比泰山沉重多了。</p>
+<p>　　他足以流芳百代而不朽，而自己官运亨通的结局也不赖。</p>
+<p>　　子曰修身治国平天下，每个士林学子的灵魂深处都埋藏着一份对建功立业蠢动与渴盼。只是缘何他盼着盼着——</p>
+<p>　　就给弯了呢？！</p>
+<p>　　“姜维……姜伯……姜约……啊不，伯、伯……约。”</p>
+<p>　　半死不活地招了几声魂，钟会往桌几上一蔫，脸上闪过滚滚天雷。</p>
+<p>　　苍天啊厚土啊三千神佛啊！</p>
+<p>　　为何偏偏是那位声震寰宇名驰九州的北伐大魔王啊？</p>
+<p>　　当今洛阳的严父慈母们恐吓小孩止啼有三宝，除却董仲颖和张文远，就是若不好好吃饭睡觉念书上进，待到国破家亡，姜伯约率蜀寇攻来捉你去蜀道上做苦力运粮。【*】</p>
+<p>　　虽然从未有人给钟会讲过睡前故事，但在这日复一日的耳濡洗礼下，他还是情不自禁地给姜维安上了一个三头六臂、龇牙裂目的形象。</p>
+<p>　　如今见到真人，谣言自是不攻自破了。但若告诉钟会，这个他冒犯了好些年尊容的将军就是他断袖的对象——</p>
+<p>　　钟会只想以头抢地。</p>
+<p>　　幸好他穿越来时，最后一步在他的那声撕心裂肺里悬崖勒马——</p>
+<p>　　否则他的脑袋一定已经抢得头破血流了。</p>
+<p>　　“士季。”</p>
+<p>　　门外突如其来地响起一道声音，钟会满脸的精彩纷呈应声凝结。</p>
+<p>　　阳光在薄薄的门扉上投射了一个高挑的阴影，然后，门推开了。</p>
+<p>　　“可无碍了？”</p>
+<p>　　怎怎怎怎怎么可能无碍啊我最大的心理障碍就是你了！</p>
+<p>　　喂，你要做什么，别、别过来！</p>
+<p>　　说了别过来阁下何故反而加快步子了？！！</p>
+<p>　　别过来别过来——</p>
+<p>　　小侄知错了小侄再也不脑补了小侄知错就改请前辈莫要和小侄计较——————！</p>
+<p>　　姜维自然听不见钟会心中的鬼哭狼嚎，于是钟会便只能眼睁睁地看着姜维一步步接近自己，戎装裁身，举步干练，在他身前单膝落地。</p>
+<p>　　姜维的脸停在钟会的眼前，问：“我昨夜吓到你了？”</p>
+<p>　　“没。没有。”钟会无法从这句干净的询问中找到任何喜怒的线索，慌乱道，“我做梦了，有大蛇咬我……啊，伯约自然不是那蠢物……”</p>
+<p>　　姜维安静听着，视线落在那一分一分逃离自己的双膝上。</p>
+<p>　　“不过是我一时难以适应蜀地湿冷，神思不宁，故时有恍惚……”</p>
+<p>　　钟会内心汗如瀑布，他不得不承认自己和“处变不惊”之间还存在不少差距。几年前的面圣，早慧机变的少年懂得在兄长失态后用“汗不敢出”为钟家二郎的名声扳回一城，也不过是看准了先帝瞧小辈热闹的心思而有恃无恐罢了。</p>
+<p>　　这不意味着，他能够在这个自己一无所知的人的审视下，同样地游刃有余。甚至，他有些惧怕这个人。</p>
+<p>　　一个叛离故土时头也不回的不归人，一位将北伐矢志不渝了半生的将军。那胸腔里跳动的，想必也是颗被饮血无数的刀枪锤击得硬冷的心吧。这样的人，要如何对倾覆了他的国，毁灭了他的信仰的仇敌真情相待？</p>
+<p>　　钟会几乎是坚信姜维的亲近别有居心。</p>
+<p>　　可是昨夜……</p>
+<p>　　昨夜……</p>
+<p>　　……</p>
+<p>　　……</p>
+<p>　　……啊不行没思路了，钟司徒你们到底在唱哪一出同床异梦的逢场戏啊？</p>
+<p>　　放弃再整理那纠结一团的千思万绪，钟会耷拉个脑袋自暴自弃，可忽然，那暴露的后颈被一只寒冷有力的手扣住了。</p>
+<p>　　钟会背脊一震，整个人定住。</p>
+<p>　　“你的脉搏很快。”</p>
+<p>　　抬起头，等待他的是一双幽深的眼睛，想逃，却被迎面投来的视线牢牢锁住。</p>
+<p>　　“……”</p>
+<p>　　发不出声音。钟会感到自己颈侧的大脉正在姜维的指腹下跳动，姜维若有若无的擦触，仿佛要温柔地将他捏碎在手心。</p>
+<p>　　“我让军医熬了宁神的汤药。”</p>
+<p>　　就在钟会即将从剧烈的呼吸中窒息时，姜维不着痕迹地放开了他，起身，转向门外渐近的脚步声。</p>
+<p>　　“进来。”</p>
+<p>　　钟会怔忡地回神，门外的守备不知是他还是姜维的亲信，就算是他这方也不能保证没有被姜维收买……</p>
+<p>　　在卫兵捧着药盏向他们走来的步途中，十五岁的少年捏着手心逼迫自己冷静下来。</p>
+<p>　　与图谋不轨的敌国统将交好、还交还兵权，究竟出于什么考量？</p>
+<p>　　但无论是钟司徒另有计较，还是他实则被姜维软禁，既然现下他还活着，那就证明姜维暂时不会动他性命。</p>
+<p>　　只要……他不暴露寄居躯体中的其实是一个不谙世事的少年郎。</p>
+<p>　　接过姜维手中的药盏，钟会未作犹豫地把汤水大口吞下。奇毒再可怕，也糟不过让姜维生疑。</p>
+<p>　　“你安心休养，”姜维暂且形容如常，“今日检阅大军我独去即可。”</p>
+<p>　　“独去？！”</p>
+<p>　　什么“敌不动我不动”给忘得一干二净，药盏落桌，钟会霍然站起，直视着姜维略显惊讶的目光道：“我身为三军统帅，若非亲历亲为，我吃再多药也难以心安。”</p>
+<p>　　钟会最不解的正在此处。</p>
+<p>　　穿越来时，二十五年后的钟司徒已把战争漂亮地结束了，他该白捡个安享荣华盛名的便宜才对。</p>
+<p>　　可套出的隐情却是他和姜维近来又在厉兵秣马。</p>
+<p>　　谁？出军何方？</p>
+<p>　　班师回京，却未获调令。</p>
+<p>　　顺取东吴，却未造船只。</p>
+<p>　　再平南蛮，却不合时宜。</p>
+<p>　　捉来套话的侍从愁眉不展道您二位每日行事神秘且亲密，属下虽然好奇却也不敢过问二位私事啊。</p>
+<p>　　钟会彻底苦了一张脸。</p>
+<p>　　若直接对唯一知情人问出口，恐怕第二天就不明不白地吊尸城头了吧？</p>
+<p>　　他只能亲自一探究竟了。</p>
+<p>　　“好吧。”姜维答应得出乎意外地快，“下雪了，披件外衣再出发。”</p>
+<p>　　钟会紧绷的思绪被他一句话轻轻拨乱了节奏。</p>
+<p>　　“雪？”上元将至，成都竟还会落雪？</p>
+<p>　　话一脱口钟会就后悔了，提心吊胆望过去，姜维却像是未有察觉般一语未置，只是弯起食指，向他的唇边探来，钟会下意识闪躲，却晚了一步，被姜维凉凉地在嘴角碰了一下。</p>
+<p>　　钟会猜自己的眼睛现在一定瞪得比铃铛还要圆还要大——他看到姜维收回的白净指节上，停着一粒深色的药汁，然后，姜维缓缓向他望了过来，英俊的脸上展露一个微笑，如初春暖阳下草甸在柔软地生长。</p>
+<p>　　钟会的内心已经不能再用震惊来形容了。</p>
+<p>　　可是，令他更加惊恐的事情发生了。</p>
+<p>　　钟司徒，这具二十五年后自己的身体，竟然随着那抹笑擅自颤动了一下，一股陌生的悸动从身体不知名的深处蓬勃涌出，丝丝麻麻地席卷了全身。</p>
+<p>　　“………………”</p>
+<p>　　钟会在被钟司徒的不自重给雷得五内俱崩的同时，深刻认识到一个问题：</p>
+<p>　　莫非他的思路一开始就错了？</p>
+<p>　　并非另有用意，并非横遭软禁。对姜维的百般信任，亲密无间，只不过是年过四十的司徒大人那纯粹的、任性的、心血来潮的——</p>
+<p>　　见色起意？！！！！</p>
+<blockquote>
+<p>【*】参考唐星著“《四本论》形成时间新考”，《四本论》成书时间在公元249-253年间，也就是会会的25-29虚岁间。此处为架空史向的胡说八道orz<br />
+【*】伯约的十一次北伐除了238那次都发生在会会的十五岁之后。此处为架空史向的胡说八道orz</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../不渡黄泉番外.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../不渡黄泉番外.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
