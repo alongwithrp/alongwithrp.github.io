@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>番外：圣无忧10-11</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><div>短篇</div></li><li class="chapter-item expanded affix "><a href="../SFF/BDHQFW.html">不渡黄泉番外</a></li><li class="chapter-item expanded affix "><a href="../SFF/QSX.html">牵丝戏</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><div>愿为西南风</div></li><li class="chapter-item expanded affix "><a href="../YWXNF/1.html">01 钟小会在成都</a></li><li class="chapter-item expanded affix "><a href="../YWXNF/13.html">番外：好奇宝宝</a></li><li class="chapter-item expanded affix "><a href="../YWXNF/SWY04.html">番外：圣无忧04</a></li><li class="chapter-item expanded affix "><a href="../YWXNF/SWY1011.html" class="active">番外：圣无忧10-11</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>　　长安就像死了，到了腊月，还是无雪，一味的干冷，躲在屋里熏火还是酸骨头，得滚做一团才暖和。</p>
+<p>　　隔着门就便被一阵淫声笑语扑了满面，荀勖晦气地抹了把脸，推门而入，那矫揉造作的嗓音骤然放大了。钟会正躲在那个人怀里，细长的指间夹着一副刚卜出的卦，“哥，是吉兆呢。”</p>
+<p>　　那副嗓音绵软无力，酥进人骨子里，却莫名更毛骨悚然了。那个钟毓没有说话，肢体不听号令般僵硬地低下头，在钟会鬓角亲了一口。</p>
+<p>　　荀勖看见钟毓虚握在案上的右手剧烈发着抖，方才那一吻太过凶险，耗干了他所有的精气，他看起来就要晕倒了。</p>
+<p>　　是荀勖的闯入，让他有机会从这个亲密的姿势中逃离出来。他看向荀勖，眼中满是恳求，荀勖却一眼狠狠警告了回去，随即赔上一张笑脸，向钟会脚步微移：“瞧舅父醉生梦死的，可还记得今天是什么日子？”</p>
+<p>　　他行走时，脚腕上的镣铐，在地上拖出一串钻心噬骨的声音。</p>
+<p>　　荀勖之后还跟着一人，也锁着一双镣铐，一进门就不肯前进半步，背佝得极深，只有一双毒辣的目光从低垂的脸上扫射出来，刻薄地扎向钟毓。钟毓偏过脸去，不愿与他相接。</p>
+<p>　　钟会不情不愿地从哥哥怀中站起来，打量着荀勖，颇有待价而沽的傲慢，“你来做什么？”</p>
+<p>　　“舅父……”</p>
+<p>　　“你们祈禳的本事也不怎么样嘛，这么现眼的一只邪物，怎么还没驱出门？”钟会不给荀勖开口的机会，指尖轻点着他，目光飘向房间的一角。</p>
+<p>　　落影之处，还伫立着一个广袖长袍的黑衣人，戴着藤枝的冠，眼神像水一样无波无澜，不知在此处停留多久了，好像早已入定，对钟会的调侃全无反应。</p>
+<p>　　“呵呵，钟会。”荀勖低声磨牙道。</p>
+<p>　　“哥，我叫人送来腊八粥，好不好？”钟会又坐回身边人怀中，眨眼像换了一个人，化作一滩黏腻的蜜糖，黏的两个人手脚相缠，分都分不开。</p>
+<p>　　钟毓大手大脚抱着钟会，笨拙地点点头，刻意忽略了荀勖不断抛过来的眼色，专心致志做一个哑巴。荀勖气急了，讥道：“这个腊八都把我们冻出疮了，倒是舅父热情似火，衣服满屋飞，在身上一时片刻都留不住。”</p>
+<p>　　说罢泄愤地在钟会落地的外袍上碾了几脚。</p>
+<p>　　他那舅父脱的就剩一件中衣了，还被扯开了领口，随着起起伏伏的动势，一大片白皙胸口都滑了出来。那处皮肉想来细腻得紧，叫人把持不住，因而才落满了深深浅浅的红印子。荀勖又看了钟毓一眼，对方更不敢抬头了。</p>
+<p>　　荀勖觉得他二舅虽然打娘胎就不是善茬，但为了混迹朝堂，好歹还是要点脸的。漫说酷冬，就是盛夏他也裹得端正，装的一副名门正派。</p>
+<p>　　如今真是可惜了。</p>
+<p>　　别看钟会一副随时都能倒下去继续寻欢的做派，那斜过来的眼神依旧名副其实的锋锐非常，他道：“荀公曾，我给你最后一个机会直言来意，若错过，此生不必再说出口了。”</p>
+<p>　　荀勖终于放弃了给那个软骨头的使眼色，硬着头皮自力更生，道：“请舅父念一念骨肉之情，把我和峻哥的脚铐解开吧。天太冷，我们脚腕的伤反反复复，已溃烂了。”</p>
+<p>　　钟会“哦”了一声，旋身坐在了案上，“你一口一个念情，怎么当初不知对你的舅父嘴下留情呢？”</p>
+<p>　　荀勖眯了眯眼，忍着没发作。</p>
+<p>　　钟会歪着下巴，愈发得意地挑起一边的唇，“你出卖自己的舅父，都在大将军那里换来什么好处了？交代清楚了，舅舅倒不是不能给你念这个情。”</p>
+<p>　　荀勖道：“舅舅想听大将军的事，勖当然知无不言。只是舅舅问的玄虚之事，大将军确实没有在勖面前提起过，勖何敢杜撰？”</p>
+<p>　　城破之时，留在司马昭身边的他们几个一个都跑不了，都被钟会捉了起来。好不容易挨到了审问，却不知钟会丢了什么魂，一上来就抓着他问那些玄而又玄之事。大将军这仗虽然输的蹊跷，却也和怪力乱神毫无关系，也不知道钟会在执着什么。</p>
+<p>　　钟会点点头，道：“想不起来了？好啊，那就等你想起来了再谈这镣铐。来人，送客！”</p>
+<p>　　“我自知年少不懂事和舅父结了梁子，舅父罚我便罢了，但请放过峻哥！”荀勖急言快语，豁出去了，他即使铤而走险，也得把这个装聋作哑的拉下水，“舅父与大舅似胶如漆，怎可残害其亲生骨肉？”</p>
+<p>　　钟会于是看向门口佝偻的那人，假意惺惺地痛声道：“倒忘了峻儿，我想问一句，我视你们如己出，为何你们兄弟就非要叛了我呢？”</p>
+<p>　　钟峻终于肯抬起头，满脸的悔恨与屈辱，咬着牙根一字一句道：“你罢手吧……”</p>
+<p>　　“钟峻！”钟毓好像终于学会说话了，急呼儿子的名字。</p>
+<p>　　钟会明眸善睐地转过脸：“哥哥心疼了？士季听哥哥的，只要哥哥一句话，说士季就是活该众叛亲离，士季就放了他们。”</p>
+<p>　　“……士……季。”两个字仿佛千钧之重，“求你放过他们吧。”</p>
+<p>　　钟会眨了眨眼，脸上的讥诮和轻浮消失了一瞬，一张脸骤然变得面无表情。钟毓吓了一跳，定睛去看，却看钟会又似笑非笑地弯起了唇，他才放心。</p>
+<p>　　钟会对钟峻道：“你二子过继于我，我的半生功过便已袭于你二子。你们背叛了我，我却不得不再给你们一次机会。”</p>
+<p>　　荀勖不失时机地插话道：“听闻叛贼姜维整兵来犯，长安的城防还未臻备，这个苦差就交给钟辿钟峻两位兄长吧。”</p>
+<p>　　钟峻眼神迷茫：“姜维？他为什么要背叛你？是么，就连他也叛了你。”他又苦笑，“钟辿，哪里还有什么……”</p>
+<p>　　荀勖突然怪叫道：“打仗亲兄弟，上阵父子兵。哥，此战必胜！”</p>
+<p>　　钟峻叹了口气，拱手领了命。</p>
+<p>　　出了门，荀勖的镣铐也沾亲带故地被解开了，他小跑着追上钟峻，拍打他的肩膀：“你刚才在钟会面前都胡说些什么！你不要命了？钟会疯了还是你疯了？”</p>
+<p>　　钟峻凄楚道：“我们家到这一步，不得不说是自作自受。做哥哥的为了求全，出卖弟弟。做侄子的为了前程，出卖叔叔。做表弟为了活命，出卖手足。现在……”他猝然停下，转身，看向身后的院落，“更有个大逆不道的，出卖生父，罔顾人伦。”</p>
+<p>　　“钟会是什么性情，你不是不知道，”荀勖不屑道，“要不是出卖，这当侄子的，当外甥的，还有里面那个又当侄子又当哥的，都得给大将军陪葬！”</p>
+<p>　　钟峻转回身，愤恨地握紧拳头。那两扇门紧闭，却挡不住阵阵的欢愉之声，天昏地旋，地覆天崩。一会儿叫着“哥哥”，一会儿叫着“稚叔”，最后都淹没在了极尽贪欢的呻吟之中。</p>
+<p>　　荀勖望向院子的牌匾，清了清嗓门，像是要和里面的人一较高下般，长吟道：“思无邪，好一个无邪呀。”</p>
+<ul>
+<li></li>
+</ul>
+<p>　　司马昭撒手人寰得很有道德，没烧粮仓，卫瓘把抢救的谷草堆了进去，满心的安全感。</p>
+<p>　　寒冬对于任何一支军队都不容小觑，要随时警惕断粮的危险。不过就目前的仓储看来，他们躲过这个冬季绰绰有余，只要城防能及时修缮如初，而且姜维也同意莫名其妙地放他们一马。</p>
+<p>　　依惯例，卫瓘该向钟会陈禀此事，以便主帅下一步安排，但他实在不想见他，尤其是在他迎面撞上了一个人之后。</p>
+<p>　　五百步开外荀勖就看见了他，眼睛尖得像他舅舅一样，卫瓘自知操守有亏，贾充还不如他，荀勖这个墙头草就更不算什么东西了。</p>
+<p>　　“卫兄留步啊，你找我二舅吧？”也不知道哪来的幸灾乐祸，荀勖怪里怪气地眨眨眼，笑得很讨打，“钟士季就在城头监工呢，你过去就看到了。”</p>
+<p>　　卫瓘根本不想猜荀勖什么意思，他在这个人面前还占点道德高点，“我只看到这镣铐不怎么长人记性。”</p>
+<p>　　“铐着还怎么作画，卫兄快请看看，”荀勖一点也不和他计较，从怀里抽出来两幅画卷，一边摊开一边絮叨，“我和钟士季年岁相仿，家里给我们请的同一位师父开蒙，最后他工书，我工画。”</p>
+<p>　　卫瓘知道这个，他们一个写伪书骗人家宝剑，一个描遗容挂人家门厅。舅甥俩如今心术不正成一个德行，从小的勾心斗角功不可没。卫瓘不想看这歪心眼子作的画，绕道要走，荀勖却挪着脚跟堵他，两个人胸膛撞胸膛，画卷撒了一地。</p>
+<p>　　“诶呀，我的画！”</p>
+<p>　　荀勖蹲下身捡，卫瓘不小心瞄了一眼画布，眼睛顿时瞪圆了。</p>
+<p>　　“这都是什么——荀公曾！”他抢来一张看，顿时没背过气去。那纸上画的是钟会，但不是什么正经玩意。画中人衣衫一半褪下了肩，一半翻上了腿根，满脸的情潮，被另一个人压在胯下。荀勖剩点脸也就是好歹他没把阳具给描出来，但这个姿势已经不言而喻了。</p>
+<p>　　那另一个人虽然描得模糊，卫瓘却认得出来，就是钟毓的脸。</p>
+<p>　　钟毓过继给钟会俩儿子，哥哥像爹，温文儒雅，弟弟像娘，雄壮方正。</p>
+<p>　　脸面正也不见得做派正，卫瓘立刻就在下一张画上看见这张道貌岸然的脸，把人按在怀里肏，再正直的脸上也只剩下凶恶了。这张墨痕都还没干，画的是城头，卫瓘可算明白荀勖说一眼就能看到是什么意思了。</p>
+<p>　　还有下一个人，下一张脸……满幅满纸的贪婪恶鬼众生相。</p>
+<p>　　他的随从把散落的画纸集起来交给他，卫瓘一掌拍开：“还留着干什么，烧干净了！”</p>
+<p>　　又冷眸射向荀勖，愤怒把声音冰到了极点，不再颤抖了，如一条冻僵的直线，“但凡流落出去一张，你罪无可恕，下去给大将军陪葬吧。”</p>
+<p>　　自己的画作被付之一炬，荀勖也不恼，还一脸好脾气模样道：“哪个大将军，哪有大将军？哦，卫兄说得是司马昭？我那二舅都把这个人忘了，整日颠鸾倒凤，活似神仙，难为卫兄还如此长情……”他的嘴比钟会的还毒。</p>
+<p>　　卫瓘冷冷道：“这张嘴诵文章，到了却只会吐露此般污言，实在可惜。这支笔善描画，却作出此般秽物，不如不要。枉你们同知诗书，同拜家礼。”</p>
+<p>　　“卫兄这话有失公允了吧？”荀勖敛了笑意，“荀某的笔，描的是饮食男女，钟士季的笔，书的却是谋人性命。卫兄不会是已经品味到个中滋味，深陷其中，无法脱身了吧？”</p>
+<p>　　卫瓘的心无缘无故地被刺了一下。</p>
+<p>　　“如果你想的是用这些败坏他的威望，寻衅滋事，趁机出逃，我劝你死了这条心。捕风捉影，不会有人相信。”　</p>
+<p>　　没有什么能比一场胜仗更能笼络人心了，钟会一个人隐而不发大半年，却将坚若磐石的长安城、不可企及的司马氏一举攻陷，这令所有人都折服了。从前待价而沽的一些将领，也转变态度，真正地归顺于钟会，相信他能带他们将司马氏的天下取而代之。</p>
+<p>　　当今姜维大举进犯，局势不明，军心却还牢牢维系在他周围，就是靠的威望！如若这些风言风语流传出去，后果卫瓘不敢想象。</p>
+<p>　　“哈哈，我还不至于如此天真。”　荀勖靠近卫瓘，压低声音道，“你就不想知道钟会是不是真的疯了吗？”</p>
+<p>　　看到卫瓘转动的眼珠，荀勖得意笑了出声，拍了拍他的肩膀：“恐怕要让卫兄失望了。舅舅看到我为他作的描容，甚为欢喜呢。”</p>
+<p>　　“……可惜了，灰飞烟灭了。”</p>
+<p>　　*</p>
+<p>　　把守这座院落的卫兵都心知肚明，有人造访，不必盘问什么，直接放行即可。阖门之后，不必戍守什么，径自退下就是。</p>
+<p>　　卫瓘浑身酒气地晃进门，钟会踩在满地的纸堆中，才一回身，就被握住了脖颈。</p>
+<p>　　“城垛倒了一片，瓮墙的地基都没挖好，怕是钟峻流连温柔乡，无心抗敌了吧？”</p>
+<p>　　“——钟士季！你要疯便疯，我们这些人跟着你，可不想白白送命！”</p>
+<p>　　卫瓘眼前烧得一片血红，只见钟会的脸在焰火中惨白，他无法自控地想起那些描容，钟会的姿影，钟会的侧颜，他的情动，他的引诱……</p>
+<p>　　逃无可逃。</p>
+<p>　　荀勖是个作画的天才，纸上的半分回眸，无心一瞥，已经勾心动魄而不自知了。卫瓘说不清自己急于烧毁画作究竟是为公为私，他怕如果被人看到，他们会像此刻的自己一样，被蛊惑了心智，不计后果地只想得到这个人。</p>
+<p>　　卫瓘怔忡地松开手，电光一闪，他的颧骨狠狠挨了一拳。</p>
+<p>　　“你到底不信我。无妨，便管好你应做之事……”钟会的话没能说完，他看见眼泪从卫瓘脸上滚落下来。</p>
+<p>　　“我游走各党各派之间，半生从容，明哲保身，首要之务便是不动心，心不动，便审慎周祥，冷眼旁观……”他看向钟会，目色悲切，“你却从心所欲，百无顾忌，你终将害我粉身碎骨！”</p>
+<p>　　“……但求与你不曾相识，不复相见。”</p>
+<p>　　“……”</p>
+<p>　　许久，钟会侧过身，“既然如此，我也不需要你了，你自行离去吧。”顿了顿，终究又道，“……别归乡，也别找司马炎，大魏已无你容身之处。”</p>
+<p>　　卫瓘钳住钟会的腕，突然吻住他的唇，恨他的招惹，恨他的残忍。钟会的中衣一下子被扯了散，荀勖描得他的肌理柔腻洁白，卫瓘快被自己的嫉妒之火焚噬成灰了，他的手心粗鲁地在他的后背游移，想把他变成独属自己之物。</p>
+<p>　　触到了后心那处箭伤的同时，卫瓘狠狠进入他的身体，“我知道你为何非杀了大将军不可了，钟士季！如果有机会，我也要杀了你。”</p>
+<p>　　“伯玉……嗯、可是已经要杀了会了……”殷红的唇瓣熟练地吐着淫邪之语，在他们结合的一瞬间，钟会就不再清醒过来。</p>
+<p>　　他的腿间一片滑腻，细细入口含吐着男人的精液，卫瓘用自己的东西插入，把那些粘稠挤出他的身体。湿润的肉壁从未饱足似的，来者不拒地裹缠着新的访客。</p>
+<p>　　“……好深……啊，伯玉……还要……”</p>
+<p>　　承受过无以计数次的嘶哑欢吟从那张不会闭合的小嘴中吐露出来，卫瓘被勾住脖颈，钟会痴迷地含着他的分身来回吞吐。</p>
+<p>　　这间室，这座院落，荡满了摧心摄魄的甜甜香气，朝生暮死，命如微虻，没有一个人还是清明的。</p>
+<p>　　天下早无他的容身之处了。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../YWXNF/SWY04.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../YWXNF/SWY04.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
